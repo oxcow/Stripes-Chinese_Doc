@@ -1,0 +1,11 @@
+{
+    "plugins": ["disqus","katex","splitter","ga"],
+    "pluginsConfig": {
+        "disqus": {
+            "shortName": "oxcow"
+        },
+        "ga": {
+            "token": "UA-40641589-1"
+        }
+    }  
+}
