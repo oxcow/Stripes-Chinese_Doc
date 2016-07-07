@@ -1,5 +1,4 @@
 {
-    //"plugins": ["disqus","katex","splitter","ga"],
     "plugins": ["katex","splitter"],
     "pluginsConfig": {
         "disqus": {
