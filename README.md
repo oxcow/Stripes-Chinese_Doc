@@ -3,8 +3,7 @@
 原文地址：[https://stripesframework.atlassian.net/wiki/display/STRIPES/How+To's](https://stripesframework.atlassian.net/wiki/display/STRIPES/How+To%27s)
 
 
-
-下述如何做系列是针对Stripes框架的：
+该系列包含以下部分：
 
 + [AJAX](ajax.md) - 结合Ajax如何使用Stripes, 用计算器应用作为示例
 + [展示错误](display_errors.md) - 如何处理验证错误及展示错误
@@ -12,6 +11,15 @@
 + [扩展](extensions.md) - 如何扩展和自定义Stripes
 + [文件上传](file_uploads.md) - 如何上传作为表单一部分的一个或多个文件
 + [Strips中使用FreeMarker](freemarker_with_stripes.md) - 如何使用FreeMarker作为Stripes的视图层技术（相比较于JSP）
-+ [Strips中使用FreeMarker](freemarker_with_stripes.md) - 如何使用FreeMarker作为Stripes的视图层技术
++ [索引属性](indexed_properties.md)(也被称作多行表单)
++ [拦截器](intercept_execution.md) - 如何使用拦截器去添加行为到Stripes请求生命周期中
++ [布局复用](layout_reuse.md) - 如何使用Stripe布局标签
++ [本地化](localization.md) - 如何使用Stripes本地化你的应用
++ [Spring和Stripes](spring_with_stripes.md) - 整合Stripes和Spring
++ [Stripes　EJB3拦截器](stripes_ejb3_interceptor.md) - 整合Stripes和EJB3 bean注入
++ [Stripes注入富集器](stripes_injection_enricher.md) - 整合Stripes和JavaEE beans
++ [状态管理](state_management.md) - 访问Session、Cookies等
++ [单元测试](unit_testing.md) - 如何为ActionBeans写单元测试
++ [更多的使用约定而非配置](use_default_more.md) - 如何在Stripes中实现约定优于配置
++ [表单向导](wizard_forms.md) - 如何去写跨多个页面或多个请求的表单
 
- 
