@@ -1,4 +1,13 @@
-# Ajax
+---
+layout: post
+title: Stripes框架如何做系列-Ajax
+description: stripes框架如何做系列中文翻译
+category: stripes
+tag: [stripes]
+---
+
+* [TOC]
+{:toc}
 
 
 如果你没有听说过[Ajax]那么你有可能还生活在穴居时代，因此这里我们不会去讲[Ajax]是什么。如果你真的需要了解，那么建议你点击[这里][1]。因为[Ajax]作为客户端技术，Stripes作为服务器端框架，所以这篇文档主要关注如何使用[Ajax]技术与Stripes进行交互。如果你关注的是客户端视觉效果和一些[Ajax]技巧，那么通过谷歌搜索你能得到比本文更好的说明。
@@ -22,7 +31,7 @@
 虽然计算器应用是不起眼的，但却可以作为讲解在[Ajax]下如何使用Stripes的好的示例。下面的JSP代码片段来自[快速开始指南]并做了点小的改动（如果你还没看过快速入开始中的代码， 那么你有必要对照着看下）:
 
 > /ajax/index.jsp
-> 
+>
 		<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 		<%@ taglib prefix="stripes" uri="http://stripes.sourceforge.net/stripes.tld"%>
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
@@ -53,10 +62,10 @@
 		</head>
 		<body>
 		<h1>Stripes Ajax Calculator</h1>
->		 
+>
 		<p>Hi, I'm the Stripes Calculator. I can only do addition. Maybe, some day, a nice programmer
 		will come along and teach me how to do other things?</p>
->		 
+>
 		<stripes:form action="/examples/ajax/Calculator.action">
 		    <table>
 		        <tr>
@@ -117,9 +126,9 @@
 下面我们看下服务器端ActionBean的代码：
 
 > "AJAX CalculatorActionBean.java"
->	
+>
 	package net.sourceforge.stripes.examples.ajax;
->	 
+>
 	import net.sourceforge.stripes.action.ActionBean;
 	import net.sourceforge.stripes.action.ActionBeanContext;
 	import net.sourceforge.stripes.action.DefaultHandler;
@@ -131,7 +140,7 @@
 	import net.sourceforge.stripes.validation.ValidationErrors;
 	import java.io.StringReader;
 	import java.util.List;
-> 
+>
 	/**
 	* A very simple calculator action that is designed to work with an ajax front end.
 	* @author Tim Fennell
@@ -140,33 +149,33 @@
 	    private ActionBeanContext context;
 	    @Validate(required=true) private double numberOne;
 	    @Validate(required=true) private double numberTwo;
-> 
+>
 	    public ActionBeanContext getContext() { return context; }
-	    public void setContext(ActionBeanContext context) { 
-		    this.context = context; 
+	    public void setContext(ActionBeanContext context) {
+		    this.context = context;
 		}
->	 
+>
 	    @DefaultHandler public Resolution add() {
 	        String result = String.valueOf(numberOne + numberTwo);
 	        return new StreamingResolution("text", new StringReader(result));
 	    }
->	 
+>
 	    public Resolution divide() {
 	        String result = String.valueOf(numberOne / numberTwo);
 	        return new StreamingResolution("text", new StringReader(result));
 	    }
->	 
+>
 	    // Standard getter and setter methods
 	    public double getNumberOne() { return numberOne; }
-	    public void setNumberOne(double numberOne) { 
-		    this.numberOne = numberOne; 
+	    public void setNumberOne(double numberOne) {
+		    this.numberOne = numberOne;
 		}
->	 
+>
 	    public double getNumberTwo() { return numberTwo; }
-	    public void setNumberTwo(double numberTwo) { 
+	    public void setNumberTwo(double numberTwo) {
 		    this.numberTwo = numberTwo;
 		}
-	}   
+	}
 
 这段代码和[快速开始指南]的代码看起来非常相似，除了加法和除法的实现有所不同外。这里将设置属性并转发请求到用户JSP页面替换成了数学计算，然后将计算结果当做文本类型，通过[StreamingResolution]对象返回给客户端。
 
@@ -191,7 +200,7 @@
 	    /** Converts errors to HTML and streams them back to the browser. */
 	    public Resolution handleValidationErrors(ValidationErrors errors) throws Exception {
 	        StringBuilder message = new StringBuilder();
-	 
+
 	        for (List<ValidationError> fieldErrors : errors.values()) {
 	            for (ValidationError error : fieldErrors) {
 	                message.append("<div class=\"error\">");
@@ -199,7 +208,7 @@
 	                message.append("</div>");
 	            }
 	        }
-	 
+
 	        return new StreamingResolution("text/html", new StringReader(message.toString()));
 	    }
 	    ...
@@ -225,7 +234,7 @@
 	    return new Resolution() {
 	        public void execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 	            response.setContentType("text/xml");
->	 
+>
 	            response.getOutputStream().print("<entries>");
 	            for (Map.Entry<String,String> entry : items.entries()) {
 	                response.getOutputStream().print("<entry><key>");
@@ -273,7 +282,7 @@
 	    var output = eval(xhr.responseText);
 	    $('result').innerHtml = output;
 	}
-> 
+>
 	/** Function to submit a request and invoke a handler when it completes. */
 	function invoke(form, event, handler) {
 	    var params = Form.serialize(form, {submit:event});
@@ -289,5 +298,4 @@
 [JavaScriptResolution]: http://stripes.sourceforge.net/docs/current/javadoc/index.html?net/sourceforge/stripes/ajax/JavaScriptResolution.html
 
 [JavaScriptBuilder]: http://stripes.sourceforge.net/docs/current/javadoc/index.html?net/sourceforge/stripes/ajax/JavaScriptBuilder.html
-
 

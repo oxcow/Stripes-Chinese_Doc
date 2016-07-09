@@ -5,8 +5,8 @@
 
 该系列包含以下部分：
 
-+ [AJAX](ajax.md) - 结合Ajax如何使用Stripes, 用计算器应用作为示例
-+ [展示错误](display_errors.md) - 如何处理验证错误及展示错误
++ [AJAX](2016-07-08-stripes-how-to-ajax.md) - 结合Ajax如何使用Stripes, 用计算器应用作为示例
++ [展示错误](2016-07-09-stripes-how-to-display-errors.md) - 如何处理验证错误及展示错误
 + [异常处理](exception_handling.md) - 如何实现一个通用的异常处理机制
 + [扩展](extensions.md) - 如何扩展和自定义Stripes
 + [文件上传](file_uploads.md) - 如何上传作为表单一部分的一个或多个文件

@@ -1,4 +1,13 @@
-# 展示错误
+---
+layout: post
+title: Stripes框架如何做系列-展示错误
+description: stripes框架如何做系列中文翻译
+category: stripes
+tag: [stripes]
+---
+
+* [TOC]
+{:toc}
 
 web应用几乎没有例外的会在某些点上生成一些验证错误信息，提示用户做错了什么，应该怎么样正确的去做。这些提示应该与你的应用UI策略一致，能明确的告诉用户如何去处理。下面介绍如何利用Stripes进行错误信息展示。
 
@@ -15,8 +24,8 @@ Stripes提供若干输出验证错误信息的标签，这些标签是值得花�
 针对这个例子，假设其不是内嵌在`<stripes:form>` 标签中的，它会将所有错误信息通过 ***HTML*** 的*ul*标签展示出来。如果在一个页面上有多个表单，可以为每一个表单在不同的位置显示错误信息：
 
 > 示例2：多表输出错误信息在不同的位置
-
->     <stripes:form action="/foo/first.action">
+>
+    <stripes:form action="/foo/first.action">
 		<stripes:errors/>
 	 ...
 	</stripes:form>
@@ -28,7 +37,7 @@ Stripes提供若干输出验证错误信息的标签，这些标签是值得花�
 	 ...
 	</stripes:form>
 
-第一个`<stripes:errors/>`标签是内嵌在｀<stripes:form>` 标签中的.这种情况下，`<stripes:errors/>` 仅输出表单提交后针对该表单的错误信息。第二个`<stripes:errors/>`不是内嵌在表单元素内的，但是由于其支持 *action* 属性，因此它将也只显示与 *action* 属性值匹配的表单错误信息。
+第一个`<stripes:errors/>`标签是内嵌在`<stripes:form>` 标签中的.这种情况下，`<stripes:errors/>` 仅输出表单提交后针对该表单的错误信息。第二个`<stripes:errors/>`不是内嵌在表单元素内的，但是由于其支持 *action* 属性，因此它将也只显示与 *action* 属性值匹配的表单错误信息。
 
 下面的示例展示如何输出指定域的错误信息，以及如何输出全局错误（不关联任何指定的的域）
 
