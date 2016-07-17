@@ -9,7 +9,7 @@ tag: [stripes,译文]
 * [TOC]
 {:toc}
 
-原文地址：[https://stripesframework.atlassian.net/wiki/display/STRIPES/Intercept+Execution](https://stripesframework.atlassian.net/wiki/display/STRIPES/Layout+Reuse)
+原文地址：[https://stripesframework.atlassian.net/wiki/display/STRIPES/Layout+Reuse](https://stripesframework.atlassian.net/wiki/display/STRIPES/Layout+Reuse)
 
 
 几乎所有的web应用程序都不止一个页面。但大多数情况所有的页面（或者针对每个页面子集使用不同的布局）都具基本相同的主题或者布局。因此常规的通用处理方式是编写如下的JSP页面：
