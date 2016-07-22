@@ -11,7 +11,7 @@
 + [扩展](2016-07-10-stripes-how-to-extensions.md) - 如何扩展和自定义Stripes
 + [文件上传](2016-07-13-stripes-how-to-file-uploads.md) - 如何上传作为表单一部分的一个或多个文件
 + [集成FreeMarker](2016-07-12-stripes-how-to-freeMarker-with-stripes.md) - 如何使用FreeMarker作为Stripes的视图层技术（相比较于JSP）
-+ [索引属性](indexed_properties.md)(也被称作多行表单)
++ [索引属性](2016-07-22-stripes-how-to-indexed-properties.md)(也被称作多行表单)
 + [拦截器](2016-07-16-stripes-how-to-intercept-execution.md) - 如何使用拦截器去添加行为到Stripes请求生命周期中
 + [布局复用](2016-07-17-stripes-how-to-layout-reuse.md) - 如何使用Stripe布局标签
 + [本地化](localization.md) - 如何使用Stripes本地化你的应用
