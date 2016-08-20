@@ -14,7 +14,7 @@
 + [索引属性](2016-07-22-stripes-how-to-indexed-properties.md)(也被称作多行表单)
 + [拦截器](2016-07-16-stripes-how-to-intercept-execution.md) - 如何使用拦截器去添加行为到Stripes请求生命周期中
 + [布局复用](2016-07-17-stripes-how-to-layout-reuse.md) - 如何使用Stripe布局标签
-+ [本地化](localization.md) - 如何使用Stripes本地化你的应用
++ [本地化](2016-08-21-stripes-how-to-localization.md) - 如何使用Stripes本地化你的应用
 + [Spring和Stripes](2016-08-03-stripes-how-to-spring-with-stripes.md) - 整合Stripes和Spring
 + [Stripes　EJB3拦截器](stripes_ejb3_interceptor.md) - 整合Stripes和EJB3 bean注入
 + [Stripes注入富集器](stripes_injection_enricher.md) - 整合Stripes和JavaEE beans

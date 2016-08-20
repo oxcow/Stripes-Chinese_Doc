@@ -11,4 +11,5 @@
   * [索引属性](2016-07-22-stripes-how-to-indexed-properties.md)
   * [拦截器](2016-07-16-stripes-how-to-intercept-execution.md)
   * [布局复用](2016-07-17-stripes-how-to-layout-reuse.md)
+  * [本地化](2016-08-21-stripes-how-to-localization.md) 
   * [Spring和Stripes](2016-08-03-stripes-how-to-spring-with-stripes.md) 
