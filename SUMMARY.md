@@ -13,3 +13,4 @@
   * [布局复用](2016-07-17-stripes-how-to-layout-reuse.md)
   * [本地化](2016-08-21-stripes-how-to-localization.md) 
   * [Spring和Stripes](2016-08-03-stripes-how-to-spring-with-stripes.md) 
+  * [状态管理](2016-08-25-stripes-how-to-state_management.md) 
