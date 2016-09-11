@@ -19,7 +19,7 @@
 + [Stripes　EJB3拦截器](stripes_ejb3_interceptor.md) - 整合Stripes和EJB3 bean注入
 + [Stripes注入富集器](stripes_injection_enricher.md) - 整合Stripes和JavaEE beans
 + [状态管理](2016-08-25-stripes-how-to-state_management.md) - 访问Session、Cookies等
-+ [单元测试](unit_testing.md) - 如何为ActionBeans写单元测试
++ [单元测试](2016-09-10-stripes-how-to-unit_testing.md) - 如何为ActionBeans写单元测试
 + [更多的使用约定而非配置](use_default_more.md) - 如何在Stripes中实现约定优于配置
 + [表单向导](wizard_forms.md) - 如何去写跨多个页面或多个请求的表单
 
