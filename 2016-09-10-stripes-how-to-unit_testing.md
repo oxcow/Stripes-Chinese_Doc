@@ -29,16 +29,16 @@ tag: [stripes,译文]
 由于**ActionBean**类是一个简单的**POJO**,因此对他们实例化，设置属性以及调用处理方法都是可以直接进行的。下面的代码用来测试CalculatorActionBean类：
 
 > CalculatorActionBeanTest.java
-> 
+>
 	public class CalculatorActionBeanTest {
 	    @Test
 	    public void myFirstTest() throws Exception {
-	        CalculatorActionBean bean = new CalculatorActionBean();
-	        bean.setContext( new ActionBeanContext() );
-	        bean.setNumberOne(2);
-	        bean.setNumberTwo(2);
-	        bean.add();
-	        Assert.assertEquals(bean.getResult(), 4, "Oh man, our math must suck!");
+		CalculatorActionBean bean = new CalculatorActionBean();
+		bean.setContext( new ActionBeanContext() );
+		bean.setNumberOne(2);
+		bean.setNumberTwo(2);
+		bean.add();
+		Assert.assertEquals(bean.getResult(), 4, "Oh man, our math must suck!");
 	    }
 	}
 
@@ -57,11 +57,11 @@ tag: [stripes,译文]
 > 
 	public class MyActionBeanContext extends MyAbstractActionBeanContext {
 	    public void setUser(User user) {
-			getRequest().getSession().setAttribute("user", user);
+		getRequest().getSession().setAttribute("user", user);
 	    }
 >	 
 	    public User getUser() {
-			return (User) getRequest().getSession().getAttribute("user");
+		return (User) getRequest().getSession().getAttribute("user");
 	    }
 	}
 
@@ -73,11 +73,11 @@ tag: [stripes,译文]
 	    private Map<String,Object> fakeSession = new HashMap<String,Object>();
 >	 
 	    public void setUser(User user) {
-			this.fakeSession.put("user", user);
+		this.fakeSession.put("user", user);
 	    }
 >	 
 	    public User getUser() {
-		    return (User) this.fakeSession.get("user");
+		return (User) this.fakeSession.get("user");
 	    }
 	}
 
@@ -90,30 +90,30 @@ tag: [stripes,译文]
 	public class LoginActionBeanTest {
 	    @Test
 	    public void successfulLogin() throws Exception {
-			MyAbstractActionBeanContext ctx = new MyTestActionBeanContext();
-			LoginActionBean bean = new LoginActionBean();
-			bean.setContext(ctx);
-			bean.setUsername("shaggy");
-			bean.setPassword("shaggy");
-			bean.login();
-	>	 
-			Assert.assertNotNull(ctx.getUser());
-			Assert.assertEquals(ctx.getUser().getFirstName(), "Shaggy");
-			Assert.assertEquals(ctx.getUser().getLastName(), "Rogers");
+		MyAbstractActionBeanContext ctx = new MyTestActionBeanContext();
+		LoginActionBean bean = new LoginActionBean();
+		bean.setContext(ctx);
+		bean.setUsername("shaggy");
+		bean.setPassword("shaggy");
+		bean.login();
+>	 
+		Assert.assertNotNull(ctx.getUser());
+		Assert.assertEquals(ctx.getUser().getFirstName(), "Shaggy");
+		Assert.assertEquals(ctx.getUser().getLastName(), "Rogers");
 	    }
 >	 
 	    @Test
 	    public void failedLogin() throws Exception {
-			MyAbstractActionBeanContext ctx = new MyTestActionBeanContext();
-			LoginActionBean bean = new LoginActionBean();
-			bean.setContext(ctx);
-			bean.setUsername("shaggy");
-			bean.setPassword("scooby");
-			bean.login();
-	>	 
-			Assert.assertNull(ctx.getUser());
-			Assert.assertNotNull(ctx.getValidationErrors());
-			Assert.assertEquals(ctx.getValidationErrors().get("password").size(), 1);
+		MyAbstractActionBeanContext ctx = new MyTestActionBeanContext();
+		LoginActionBean bean = new LoginActionBean();
+		bean.setContext(ctx);
+		bean.setUsername("shaggy");
+		bean.setPassword("scooby");
+		bean.login();
+>	 
+		Assert.assertNull(ctx.getUser());
+		Assert.assertNotNull(ctx.getValidationErrors());
+		Assert.assertEquals(ctx.getValidationErrors().get("password").size(), 1);
 	    }
 	}
 
@@ -174,12 +174,12 @@ tag: [stripes,译文]
 > 	 
 	    @Configuration(beforeTest=true)
 	    public void setupNonTrivialObjects() {
-			TestFixture.context = new MockServletContext("test");
-			...
+		TestFixture.context = new MockServletContext("test");
+		...
 	    }
 > 	 
 	    public static MockServletContext getServletContext() {
-			return TestFixture.context;
+		return TestFixture.context;
 	    }
 	}
 
@@ -377,7 +377,7 @@ around any security/data checks.
 	    // ....... the rest of test code
 	}
 
-域名加密代码应该用||开始并用其分割所有域名。然后将加密值指定给由Stripes内部使用的特殊参数“__fp”。
+域名加密代码应该用\|\|开始并用其分割所有域名。然后将加密值指定给由Stripes内部使用的特殊参数“__fp”。
 
 现在所有你的测试都很好的通过并退出，但是在测试日志中你仍有极大可能看到如下的错误信息：
 
