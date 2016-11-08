@@ -16,3 +16,4 @@
   * [状态管理](2016-08-25-stripes-how-to-state_management.md) 
   * [单元测试](2016-09-10-stripes-how-to-unit_testing.md)
   * [更多使用默认配置](2016-09-15-stripes-how-to-use_defaults_more.md)
+  * [表单向导](2016-11-06-stripes-how-to-wizard_forms.md)
